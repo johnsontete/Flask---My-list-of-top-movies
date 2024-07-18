@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}Edit Movies{% endblock %}
+
+{% block content %}
+<div class="content">
+  <h1 class="heading">{{movie.title}}</h1>
+    <p class="description">Edit Movie Rating</p>
+    <div class="row">
+      <div class="col-md-6 mx-auto p-3">
+    <form action="{{edit_view}}" method="POST">
+      {{ form.rating.label }} {{ form.rating(size=20) }}<br><br>
+      {{ form.review.label }} {{ form.review(size=20) }}<br><br>
+      {{ form.submit(size=20) }}
+    </form>
+  </div>
+  </div>
+  </div>
+{% endblock %}
